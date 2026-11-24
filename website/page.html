@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1719">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  {{verification}}
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="alternate" hreflang="de" href="{{base}}">
+  <link rel="alternate" hreflang="en" href="{{base}}en/">
+  <link rel="alternate" hreflang="x-default" href="{{base}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IDM Heatpump Client · Xerolux">
+  <meta property="og:locale" content="{{locale}}">
+  <meta property="og:locale:alternate" content="{{otherLocale}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{base}}assets/dashboard-demo.png">
+  <meta property="og:image:width" content="1702">
+  <meta property="og:image:height" content="974">
+  <meta property="og:image:alt" content="{{dashboardAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{base}}assets/dashboard-demo.png">
+  <meta name="twitter:image:alt" content="{{dashboardAlt}}">
+  <link rel="icon" href="{{prefix}}assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="{{prefix}}{{stylesheetName}}">
+  <script type="application/ld+json">{{schema}}</script>
+</head>
+<body>
+  <a class="skip" href="#main">{{skip}}</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="{{canonical}}"><img src="{{prefix}}assets/icon.png" alt="" width="29" height="29">IDM Heatpump Client</a>
+      <nav class="nav-links" aria-label="{{nav}}">
+        <a href="#features">{{featuresLabel}}</a>
+        <a href="#downloads">Downloads</a>
+        <a href="{{repo}}/blob/main/docs/USER-GUIDE.md{{guideAnchor}}">{{guide}}</a>
+        <a class="locale" href="{{alternate}}" lang="{{otherLang}}" hreflang="{{otherLang}}">{{otherLanguage}}</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="intro">
+          <p class="eyebrow">{{product}}</p>
+          <h1>{{heading}}<br><span>{{highlight}}</span></h1>
+          <p class="lead">{{intro}}</p>
+          <div class="actions">
+            <a class="button primary" href="#downloads">{{download}}</a>
+            <a class="button" href="{{repo}}">GitHub</a>
+          </div>
+          <p class="release-line"><a href="{{releaseUrl}}">{{releaseTag}}</a> · Windows · Linux · macOS · MIT</p>
+        </div>
+        <figure class="product-shot">
+          <div class="frame"><img src="{{prefix}}assets/dashboard-demo.png" width="1702" height="974" alt="{{dashboardAlt}}" fetchpriority="high"></div>
+          <figcaption>{{demoCaption}}</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section" id="features">
+      <div class="wrap">
+        <h2>{{featuresHeading}}</h2>
+        <div class="features">{{features}}</div>
+      </div>
+    </section>
+    {{licensing}}
+    <section class="section">
+      <div class="wrap setup">
+        <figure>
+          <div class="frame"><img src="{{prefix}}assets/connection-manager.png" alt="{{managerAlt}}" width="1783" height="942" loading="lazy" decoding="async"></div>
+          <figcaption>{{managerCaption}}</figcaption>
+        </figure>
+        <div>
+          <h2>{{setupHeading}}</h2>
+          <p>{{setupIntro}}</p>
+          <ol>{{setupSteps}}</ol>
+          <a href="{{repo}}/blob/main/docs/USER-GUIDE.md{{guideAnchor}}">{{guide}}</a>
+        </div>
+      </div>
+    </section>
+    <section class="section download-section" id="downloads">
+      <div class="wrap">
+        <h2>{{downloadsHeading}}</h2>
+        <p>{{downloadsIntro}}</p>
+        <div class="packages">{{packages}}</div>
+        <p>{{updaterHint}}</p>
+        <div class="source-links">
+          <a href="{{releaseUrl}}">{{releaseNotes}}</a>
+          <a href="{{repo}}/blob/main/CHANGELOG.md">Changelog</a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="help">
+      <div class="wrap">
+        <h2>{{faqHeading}}</h2>
+        <div class="details">{{faq}}</div>
+        <div class="source-links">
+          <a href="{{repo}}/issues">{{issues}}</a>
+          <a href="{{repo}}/blob/main/docs/LICENSES.md">{{licenses}}</a>
+          <a href="https://github.com/sponsors/xerolux">{{sponsor}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="https://xerolux.de/">© 2026 Xerolux</a>
+      <p>{{trademark}}</p>
+      <div class="source-links">
+        <a href="https://saturn.blueml.eu/impressum/">{{legal}}</a>
+        <a href="{{prefix}}sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
