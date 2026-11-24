@@ -9,9 +9,8 @@ on:
       - "src/main/assets/tray.png"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
-  workflow_run:
-    workflows: [Release]
-    types: [completed]
+  release:
+    types: [published]
 
 permissions:
   contents: read
@@ -22,7 +21,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    if: github.event_name != 'release' || (!github.event.release.prerelease && !github.event.release.draft)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
